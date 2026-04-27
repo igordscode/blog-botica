@@ -5,15 +5,33 @@
 :root {
   --background: #F9F7F2;
   --foreground: #0F172A;
+  --botica-navy: #10346B;
+  --botica-gold: #D4AF37;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .glass-header {
+    @apply sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-botica-navy/5;
   }
+  
+  .scientific-gradient {
+    background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.05), transparent),
+                radial-gradient(circle at bottom left, rgba(16, 52, 107, 0.05), transparent);
+  }
+
+  .text-luxury {
+    @apply tracking-tight leading-tight font-serif;
+  }
+}
+
+/* Custom Selection Color */
+::selection {
+  background: rgba(212, 175, 55, 0.2);
+  color: #10346B;
 }

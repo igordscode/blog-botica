@@ -25,32 +25,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} font-sans bg-botica-cream text-slate-900`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans bg-botica-cream text-slate-900 scientific-gradient`}>
         {/* Top Professional Bar */}
-        <div className="bg-botica-navy text-white/80 text-[10px] py-1.5 px-4 text-center font-bold tracking-[0.3em] uppercase">
+        <div className="bg-botica-navy text-white/90 text-[10px] py-2 px-4 text-center font-bold tracking-[0.4em] uppercase">
           Divulgación Científica Farmacéutica • Botica Guaraní
         </div>
 
         {/* Header */}
-        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-botica-navy/10">
-          <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <div className="flex items-center gap-4">
+        <header className="glass-header">
+          <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <div className="flex items-center gap-8">
               <Menu className="text-botica-navy cursor-pointer md:hidden" />
-              <div className="hidden md:flex gap-6 text-xs font-bold uppercase tracking-widest text-slate-500">
-                <a href="#" className="hover:text-botica-gold">Longevidad</a>
-                <a href="#" className="hover:text-botica-gold">Performance</a>
-                <a href="#" className="hover:text-botica-gold">Biohacking</a>
+              <nav className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                <a href="#" className="hover:text-botica-gold transition-colors">Longevidad</a>
+                <a href="#" className="hover:text-botica-gold transition-colors">Performance</a>
+                <a href="#" className="hover:text-botica-gold transition-colors">Biohacking</a>
+              </nav>
+            </div>
+
+            <div className="text-center group cursor-pointer">
+              <h1 className="text-3xl font-serif font-bold text-botica-navy leading-none tracking-tight group-hover:text-botica-gold transition-colors">Botica Blog</h1>
+              <div className="flex items-center justify-center gap-2 mt-1">
+                <span className="h-[1px] w-4 bg-botica-gold/30"></span>
+                <span className="text-[9px] uppercase tracking-[0.5em] text-botica-gold font-bold">Insights</span>
+                <span className="h-[1px] w-4 bg-botica-gold/30"></span>
               </div>
             </div>
 
-            <div className="text-center">
-              <h1 className="text-2xl font-serif font-bold text-botica-navy leading-none">Botica Blog</h1>
-              <span className="text-[9px] uppercase tracking-[0.4em] text-botica-gold font-bold">Insights Científicos</span>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <Search size={20} className="text-slate-400" />
-              <button className="hidden md:block px-5 py-2 bg-botica-navy text-white text-[10px] font-bold uppercase tracking-widest rounded-full hover:bg-botica-gold hover:text-botica-navy transition-all">
+            <div className="flex items-center gap-6">
+              <Search size={18} className="text-slate-400 hover:text-botica-navy cursor-pointer transition-colors" />
+              <button className="hidden md:block px-7 py-3 bg-botica-navy text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full hover:bg-botica-gold hover:text-botica-navy transition-all shadow-lg shadow-botica-navy/10 hover:shadow-botica-gold/20">
                 Suscribirse
               </button>
             </div>

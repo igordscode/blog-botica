@@ -24,39 +24,50 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section - Featured Article */}
-      <section className="relative w-full h-[70vh] flex items-center bg-botica-navy overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
+      {/* Hero Section - Elite Featured Article */}
+      <section className="relative w-full h-[85vh] flex items-center bg-botica-navy overflow-hidden">
+        <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1532187875605-1ef6c7a6b995?auto=format&fit=crop&q=80&w=2000" 
-            alt="Hero" 
-            className="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1579154235602-3c2c2993d162?auto=format&fit=crop&q=90&w=2000" 
+            alt="Advanced Laboratory" 
+            className="w-full h-full object-cover opacity-50 scale-105"
           />
+          {/* Scientific Overlay Elements */}
+          <div className="absolute inset-0 bg-gradient-to-t from-botica-navy via-botica-navy/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-noise opacity-[0.03] mix-blend-overlay"></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-botica-navy via-botica-navy/60 to-transparent"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2">
-          <div className="space-y-6">
-            <span className="inline-block px-3 py-1 bg-botica-gold text-botica-navy text-[10px] font-bold uppercase tracking-widest rounded">
-              Lectura Imprescindible
-            </span>
-            <h2 className="text-4xl md:text-7xl font-serif font-bold text-white leading-tight">
-              La Frontera de la <br/>Medicina de Precisión
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-8 space-y-8">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-botica-gold/10 border border-botica-gold/20 backdrop-blur-md rounded-full">
+              <span className="w-2 h-2 bg-botica-gold rounded-full animate-pulse"></span>
+              <span className="text-botica-gold text-[10px] font-bold uppercase tracking-[0.3em]">Lectura de Portada</span>
+            </div>
+            
+            <h2 className="text-5xl md:text-8xl font-serif font-bold text-white leading-[0.9] tracking-tighter max-w-4xl">
+              La Nueva Era de la <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-botica-gold via-white to-white/70">Longevidad</span>
             </h2>
-            <p className="text-slate-300 text-lg max-w-lg leading-relaxed">
-              Exploramos cómo la farmacogenómica y los agentes de IA están redefiniendo el tratamiento personalizado en la medicina moderna paraguaya.
+            
+            <p className="text-slate-300 text-xl max-w-xl leading-relaxed font-light">
+              Desde la medicina de precisión hasta los agentes de IA: cómo Paraguay está liderando el futuro del biohacking ético.
             </p>
-            <div className="flex items-center gap-6 pt-4">
-              <button className="px-8 py-4 bg-white text-botica-navy font-bold rounded-full hover:bg-botica-gold transition-all flex items-center gap-2 group">
-                Leer Artículo Principal <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            
+            <div className="flex items-center gap-8 pt-6">
+              <button className="px-10 py-5 bg-white text-botica-navy font-bold rounded-full hover:bg-botica-gold hover:-translate-y-1 transition-all flex items-center gap-3 group shadow-2xl shadow-black/20">
+                Explorar Artículo <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
+              <div className="hidden md:flex flex-col border-l border-white/20 pl-8">
+                <span className="text-botica-gold text-xs font-bold uppercase tracking-widest">Tiempo de Lectura</span>
+                <span className="text-white text-lg font-serif italic">15 minutos intensos</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <div className="max-w-7xl mx-auto px-6 py-32 grid grid-cols-1 lg:grid-cols-12 gap-20">
         
         {/* Articles Feed */}
         <div className="lg:col-span-8 space-y-20">
